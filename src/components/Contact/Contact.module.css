@@ -53,3 +53,30 @@
     background-color: #d9363e;
     transform: translateY(-2px);
   }
+
+  .editBtn {
+    margin-right: 10px;
+    outline: none;
+    background-color: #1890ff;
+    border: 2px solid #1890ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .editBtn:focus,
+  .editBtn:hover {
+    outline: none;
+    border: 2px solid #40a9ff;
+    background-color: #40a9ff;
+    transform: translateY(-2px);
+  }
+  .editInput {
+    width: 80%;
+    padding: 5px;
+    border: 2px solid #d9d9d9;
+    border-radius: 8px;
+  }

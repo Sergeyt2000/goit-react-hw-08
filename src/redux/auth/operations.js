@@ -4,7 +4,6 @@ import axios from "axios";
 axios.defaults.baseURL = "https://connections-api.goit.global/";
 
 const setAuthHeader = (value) => {
-  console.log("Setting Authorization header:", value);
   axios.defaults.headers.common.Authorization = value;
 };
 
