@@ -4,6 +4,7 @@ import { logout } from "../../redux/auth/operations";
 import { NavLink } from "react-router";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/auth/selectors";
+import { BiLogOut } from "react-icons/bi";
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -15,7 +16,10 @@ export default function UserMenu() {
   return (
     <div className={css.userMenu}>
       <p className={css.username}>Welcome, {user.name}</p>
-      <NavLink onClick={handleLogOut}>Logout</NavLink>
+      <button className={css.btn} type="button" onClick={handleLogOut}>
+        <BiLogOut size="25" />
+        <span>LogOut</span>
+      </button>
     </div>
   );
 }
