@@ -5,7 +5,8 @@ import { useId } from "react";
 import css from "./ContactForm.module.css";
 import { formSchema } from "../../formSchema";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactForm() {
   const dispatch = useDispatch();  
@@ -15,6 +16,7 @@ export default function ContactForm() {
   const initialContacts = { username: "", phonenumber: "" };  
   
   const handleSubmit = (values, actions) => {
+    toast.success("Successfully added!");
     dispatch(
       addContact({
         // id: "id-" + generateId(),
@@ -48,6 +50,16 @@ export default function ContactForm() {
         <button className={css.addbtn} type="submit">
           Add contact
         </button>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              background: "#363636",
+              color: "#fff",
+            },
+          }}
+        />
       </Form>
     </Formik>
   );

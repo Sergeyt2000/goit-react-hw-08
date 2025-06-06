@@ -1,5 +1,5 @@
 import css from "./SearchBox.module.css";
-import { changeFilter } from "../../redux/filtersSlice";
+import { changeFilter } from "../../redux/filters/slice";
 import { useSelector, useDispatch } from "react-redux";
 import { useDebouncedCallback } from "use-debounce";
 
@@ -14,6 +14,7 @@ export default function SearchBox() {
     <div className={css.searchBox}>
       <label htmlFor="searchInput">Find contacts by name</label>
       <input
+        className={css.searchInput}
         type="text"
         id="searchInput"
         defaultValue={filterValue}

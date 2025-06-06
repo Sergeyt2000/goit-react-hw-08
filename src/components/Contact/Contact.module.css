@@ -1,27 +1,55 @@
-.contactBox {    
-    min-width: 450px;
+.contactBox {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 20px;
-    /* width: calc((100% - (2 * 20px)) / 3); */
-    font-size: 20px;
-    font-weight: 500;
-}
-.contact {
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-width: 400px;
+  }
+  
+  .contact {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 270px;    
-    overflow: hidden;
-}
-.delbtn {
-    max-height: fit-content;
-}
-.contactInfo {
+    width: 70%;
+  }
+  
+  .contactInfo {
     display: flex;
-    gap: 10px;
     align-items: center;
-}
+    gap: 10px;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .contactInfo svg {
+    font-size: 1.4em;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .contactInfo:hover svg {
+    color: #0056b3;
+  }
+  
+  .name {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #222;
+  }
+  
+  .delbtn {
+    background-color: #ff4d4f;
+    border: 2px solid #ff4d4f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .delbtn:hover {
+    border: 2px solid #d9363e;
+    background-color: #d9363e;
+    transform: translateY(-2px);
+  }
