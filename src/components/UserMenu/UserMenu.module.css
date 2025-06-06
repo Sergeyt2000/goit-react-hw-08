@@ -3,3 +3,7 @@
     align-items: center;
     gap: 40px;
 }
+.username {
+    font-weight: 500;
+    color: black;
+}
